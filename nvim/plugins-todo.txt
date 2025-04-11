@@ -1,0 +1,2 @@
+tpope/vim-fugitive	:Git tools
+Fix how windows look in default nvim
