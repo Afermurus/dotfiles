@@ -1,0 +1,127 @@
+{
+    "layer": "top",
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": [
+        "mpris", "wireplumber",
+        "temperature", "cpu", "memory",
+        "network", "bluetooth",
+        "power-profiles-daemon", "battery"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{name}:{icon} ",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        }
+    },
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "format-icons": {
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "states": {
+            "low": 15,
+            "mid": 40,
+            "ok": 80,
+            "full": 95,
+        },
+        "tooltip-format": "{timeTo}\nPower draw{power} W\nBattery health {health}% of max"
+    },
+    "clock": {
+        "format-alt": "{:%a %d/%m %H:%M}",
+        "tooltip": false,
+    },
+    "bluetooth": {
+        "format-disabled": "󰂯 Disabled",
+        "format-off": " 󰂲 ",
+        "format-on": "  ",
+        "format-connected": " 󰂱 ",
+        "format-no-controller": "",
+        "on-click": "bluetoothctl show | grep -q 'Powered: yes' && bluetoothctl power off || bluetoothctl power on",
+        "on-click-right": "~/.config/waybar/wofi-bluetooth",
+        "tooltip": false,
+    },
+    "network": {
+        "format-ethernet": " 󰈀 ",
+        "format-wifi": "󰖩",
+        "format-disconnected": "󰖪",
+        "on-click": "hyprctl dispatch exec '[float; center] nm-connection-editor'",
+        "tooltip-format-ethernet": "Connected via {ipaddr}/{cidr}",
+        "tooltip-format-wifi": "{essid} ({signalstrenght}%) 󱚻 ",
+        "tooltip-format-disconnected": "Disconnected",
+        "tooltip-format-disabled": "Disabled",
+    },
+    "cpu": {
+        "interval": 3,
+        "format": " {usage}%",
+        "states": {
+            "low" : 0,
+            "medium": 40,
+            "high": 75
+        },
+    },
+    "temperature": {
+        "thermal-zone": 3,
+        "critical-threshold": 88,
+        "format": "{icon}{temperatureC}°C",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 15,
+        "format": " {percentage}%",
+        "tooltip-format": "Memory: {used:0.1f}/{total:0.1f} GiB\nSwap: {swapUsed:0.1f}/{swapTotal:0.1f} GiB"
+    },
+    "mpris": {
+        "player": "playerctld",
+        "format":         "{player_icon}{dynamic} {status_icon} ",
+        "format-playing": "{player_icon}{dynamic} {status_icon} ",
+        "format-paused":  "{player_icon}{dynamic} {status_icon} ",
+        "format-stopped": "{player_icon}{status_icon} ",         
+        "player-icons": {           
+            "default":  "󰎆 ",
+            "mpv":      " ",
+            "spotify":  "󰓇 ",
+            "vlc":      "󰕼 ",
+            "firefox":  " ",
+            "youtube":  " "
+        },
+        "status-icons": {
+            "playing": "⏸",
+            "paused":  "▶",
+            "stopped": "⏹"
+        },
+        "dynamic-order":            ["title", "artist"],
+        "dynamic-importance-order": ["title", "artist"],
+        "title-len":   20,          
+        "artist-len":  20,
+        "dynamic-len": 45,          
+        "max-length":  50,          
+        "on-click":        "playerctl play-pause",
+        "on-click-middle": "playerctl previous",
+        "on-click-right":  "playerctl next",
+        "interval": 1,                  
+        "expand": false,                
+        "ignored-players": [ "thunderbird", "discord" ],
+        "tooltip-format": "{player}\n{status}\n{artist}\n{title}\n{length}"
+    },  
+    "wireplumber": {
+        "format": "  {volume}%",
+        "format-muted": "  ",
+        "states": {
+            "low": 0,
+            "medium": 15,
+            "high": 50,
+            "loud": 75,
+        },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+}

@@ -42,7 +42,8 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-font-family = "FiraMono Nerd Font Mono Bold"
+font-family = "FiraCode Nerd Font Mono Bold"
+font-size = 16
 
 mouse-hide-while-typing = true
 # ask for safety

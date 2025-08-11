@@ -1,2 +1,1 @@
---print("tjabba")
 require("fermurus")

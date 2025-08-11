@@ -1,4 +1,0 @@
---vim.api.nvim_open_win(bufnr, true{
---    border = { "🭽", "▔", "🭾", "▕", "🭿", "▁", "🭼", "▏" },
---    style = "minimal"
---}) 
