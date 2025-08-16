@@ -1,5 +1,5 @@
 partial alphanumeric_keys
-xkb_symbols "aftbl"
+xkb_symbols "basic"
 {
     name[Group1]= "Ferms TBL";
 
@@ -16,7 +16,7 @@ xkb_symbols "aftbl"
     key <AE08> { [ parenright, 8 ] };
     key <AE09> { [ bracketright, 9 ] };
     key <AE10> { [ asterisk, 0 ] };
-    key <AE11> { [ minus, question ] };
+    key <AE11> { [ minus, exclam ] };
     key <AE12> { [ percent, dollar ] };
     key <BKSP> { [ BackSpace ] };
 
@@ -46,7 +46,7 @@ xkb_symbols "aftbl"
     key <AC09> { [ l, L ] };
     key <AC10> { [ semicolon, colon, odiaeresis, Odiaeresis ] };
     key <AC11> { [ apostrophe, quotedbl, adiaeresis, Adiaeresis ] };
-    key <BKSL> { [ numbersign, exclam ] };
+    key <BKSL> { [ numbersign, question ] };
     key <RTRN> { [ Return ] };
 
     key <LFSH> { [ Shift_L ] };
