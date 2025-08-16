@@ -7,16 +7,16 @@ xkb_symbols "basic"
     key <ESC>  { [ Escape ] };
 
     key <TLDE> { [ grave, asciitilde ] };
-    key <AE01> { [ plus, 1 ] };
-    key <AE02> { [ bracketleft, 2 ] };
-    key <AE03> { [ parenleft, 3 ] };
-    key <AE04> { [ braceleft, 4 ] };
-    key <AE05> { [ ampersand, 5 ] };
-    key <AE06> { [ equal, 6 ] };
-    key <AE07> { [ braceright, 7 ] };
-    key <AE08> { [ parenright, 8 ] };
-    key <AE09> { [ bracketright, 9 ] };
-    key <AE10> { [ asterisk, 0 ] };
+    key <AE01> { [ 1, plus ] };
+    key <AE02> { [ 2, bracketleft ] };
+    key <AE03> { [ 3, parenleft ] };
+    key <AE04> { [ 4, braceleft ] };
+    key <AE05> { [ 5, ampersand ] };
+    key <AE06> { [ 6, equal ] };
+    key <AE07> { [ 7, braceright ] };
+    key <AE08> { [ 8, parenright ] };
+    key <AE09> { [ 9, bracketright ] };
+    key <AE10> { [ 0, asterisk ] };
     key <AE11> { [ minus, exclam ] };
     key <AE12> { [ percent, dollar ] };
     key <BKSP> { [ BackSpace ] };
