@@ -17,7 +17,7 @@ xkb_symbols "basic"
     key <AE08> { [ 8, parenright ] };
     key <AE09> { [ 9, bracketright ] };
     key <AE10> { [ 0, asterisk ] };
-    key <AE11> { [ minus, exclam ] };
+    key <AE11> { [ backslash, exclam ] };
     key <AE12> { [ percent, dollar ] };
     key <BKSP> { [ BackSpace ] };
 
@@ -32,7 +32,7 @@ xkb_symbols "basic"
     key <AD08> { [ i, I ] };
     key <AD09> { [ o, O ] };
     key <AD10> { [ p, P ] };
-    key <AD11> { [ backslash, bar, aring, Aring] };
+    key <AD11> { [ slash, bar, aring, Aring] };
     key <AD12> { [ at, asciicircum ] };
 
     key <CAPS> { [ Escape ] };
@@ -61,7 +61,7 @@ xkb_symbols "basic"
     key <AB07> { [ m, M ] };
     key <AB08> { [ comma, less ] };
     key <AB09> { [ period, greater ] };
-    key <AB10> { [ slash, underscore ] };
+    key <AB10> { [ minus, underscore ] };
     key <RTSH> { [ Shift_R ] };
 
     key <LCTL> { [ Control_L ] };
