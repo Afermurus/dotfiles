@@ -15,6 +15,16 @@ return {
                 "jinja", "jsonc", "markdown", "markdown_inline", "tmux", "jsx", "tsx",
                 "vimdoc", "vim", "xml", "yaml", "zathurarc"
             })
+
+            -- Enable Treesitter highlighting for every buffer that has a parser
+            vim.api.nvim_create_autocmd("FileType", {
+                callback = function(args)
+                    local ok = pcall(vim.treesitter.start, args.buf)
+                    if not ok then
+                        -- No parser for this filetype, fall back silently
+                    end
+                end,
+                })
         end,
     },
     {
