@@ -60,9 +60,7 @@ return {
             local servers = {
                 clangd = {},
                 gopls = {},
-                pyright = {},
                 lua_ls = {},
-                ts_ls = {},
             }
 
             local ensure_installed = vim.tbl_keys(servers or {})
@@ -75,7 +73,7 @@ return {
                 automatic_installation = false,
                 handlers = {
                     function (server_name)
-                        local server = servers{server_name} or {}
+                        local server = servers[server_name] or {}
                         server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
                         require('lspconfig')[server_name].setup(server)
                     end
